@@ -1,0 +1,162 @@
+.Nav {
+  margin-left:40px;
+  margin-top: 10px;
+  grid-column: 1/2;
+  width: 250px;
+  height: 80vh;
+  transform: translate(20px, 37px);
+  perspective: 2100px;
+}
+ h3{
+   display: none;
+ }
+.prism {
+  max-width: 90%;
+  min-width: 70%;
+  height: 40px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateNav 1.5s ease-in forwards;
+}
+
+.face {
+  h1 {
+    font-family: "Karantina", cursive;
+    font-size: 3em;
+  }
+
+  li {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    font-style: none;
+    padding: 10px;
+    a:link {
+      text-decoration: none;
+      &:visited {
+        color: black;
+      }
+    }
+  }
+  position: absolute;
+  width: 250px;
+  height: 730px;
+  border-radius: 5px;
+  background: linear-gradient(180deg,#0594D0,#04BBFF);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(25px);
+  height: 50px;
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(705px);
+  height: 50px;
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(225px);
+  width: 50px;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(25px);
+  width: 50px;
+  border-radius: 5px;
+}
+.back {
+  display: flex;
+  transform: rotateX(-180deg) translateZ(25px);
+  border-radius: 5px;
+   place-content: center;
+  place-items: center;
+  .hamburger-icon{
+    display: none;
+  }
+ div{
+  display: flex;
+  place-items: center;
+  place-content: center;
+  flex-direction: column;
+
+   
+    .line{
+    margin: 15px;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #007198;
+  
+    } 
+   
+   
+ 
+ }
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(25px);
+  border-radius: 4px;
+  background: linear-gradient(45deg, #0594D0,#04BBFF);
+}
+h1 {
+  margin: 50px;
+}
+
+li {
+  transform: translate(40px, 40px);
+  list-style: none;
+  margin: 10px;
+}
+@keyframes rotateNav {
+  from {
+    transform: rotateY(110deg);
+  }
+  to {
+    transform: rotateY(390deg);
+  }
+}
+
+// MEDIA QUERY MAX-WIDTH 1214PX ============================================
+
+@media screen and (max-width:1214px){
+  .Nav{
+    margin-left: 5px;
+  }
+}
+
+// MEDIA QUERY MAX-WIDTH 643PX ============================================
+
+@media screen and (max-width:643px) {
+  .Nav{
+    
+    grid-area: 1/1/2/2;
+    z-index: 1;
+    height: 300px;
+    h3{
+      position: absolute;
+      font-family: "Antonio", sans-serif;
+      font-size: 1.9em;
+      display: block;
+      text-align: center;
+      transform: translate(190px,15px);
+    }
+
+  }
+    .prism{
+      
+      animation: none;
+
+      .back{
+        .hamburger-icon{
+          display: block;
+        }
+      }
+    }
+      
+  }
+
+
+ 
+    
+  
